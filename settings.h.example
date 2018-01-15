@@ -1,0 +1,20 @@
+#define MY_REDDIT_USERNAME "foobar"
+
+typedef struct {
+	char *shortcut;
+	char *expansion;
+} shortcut_t;
+
+// Use the correct capitalization to avoid redirects.
+const shortcut_t SUBREDDIT_SHORTCUTS[] = {
+	(shortcut_t) {.shortcut = "i", .expansion = "italy"},
+	(shortcut_t) {.shortcut = "m", .expansion = "Malware"},
+};
+#define SUBREDDIT_SHORTCUTS_LENGTH 2
+
+const shortcut_t URL_SHORTCUTS[] = {
+	(shortcut_t) {.shortcut = "r", .expansion = "https://reddit.com"},
+	(shortcut_t) {.shortcut = "gh", .expansion = "https://github.com"},
+	(shortcut_t) {.shortcut = "hn", .expansion = "https://news.ycombinator.com"}
+};
+#define URL_SHORTCUTS_LENGTH 3
